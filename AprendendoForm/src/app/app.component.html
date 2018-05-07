@@ -25,7 +25,13 @@
     <input type="text"  
       id="skuInput"  
      placeholder="SKU"  
-     [formControl]="meuForm.controls['novoCampo']">
+     [formControl]="meuForm.controls['novoCampo']" 
+     >
+    <!--[formControl] e formControlName são duas formas de fazer o bind do input com o atributo do form-->
+    <!--
+    [formControl]="meuForm.controls['novoCampo']" 
+     formControlName="novoCampo"
+    -->     
      <button type="submit" class="ui button">Enviar 02</button>  
   <div *ngIf="!meuForm.hasError('required')">
     Campo é obrigatório

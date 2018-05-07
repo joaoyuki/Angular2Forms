@@ -14,13 +14,13 @@ export class AppComponent implements OnInit{
   }
 
   meuForm: FormGroup;
-  novoCampo: AbstractControl;
+  //novoCampo: AbstractControl;
 
   constructor(fb: FormBuilder){
     this.meuForm = fb.group({
       'novoCampo' : ['Foi inicializado pelo formbuilder', Validators.required]
     });
-    this.novoCampo = this.meuForm.controls['novoCampo'];
+    //this.novoCampo = this.meuForm.controls['novoCampo'];
   }
 
   onSubmit(form: FormGroup): void{

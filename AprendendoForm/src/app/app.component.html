@@ -17,3 +17,22 @@
     <button type="submit" class="ui button">Enviar</button>  
   </form>  
 </div>
+<div>
+  <h2>Utilizando outro form - meuForm</h2>
+  <form [formGroup]="meuForm"
+  (ngSubmit)="onSubmit02(meuForm)"  > <!--Aqui dizemos ao angular que o meuForm será o FormGroup-->
+    <label for="NovoCampoID">Novo ID</label>  
+    <input type="text"  
+      id="skuInput"  
+     placeholder="SKU"  
+     [formControl]="meuForm.controls['novoCampo']">
+     <button type="submit" class="ui button">Enviar 02</button>  
+  <div *ngIf="!meuForm.hasError('required')">
+    Campo é obrigatório
+  </div>
+  <div *ngIf="!meuForm.valid">
+    form é inválido
+  </div>  
+
+  </form>
+</div>
